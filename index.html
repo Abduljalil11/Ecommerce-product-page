@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="ecommerce.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+  <script src="ecommerce.js" defer></script>
+</head>
+<body>
+<div id="lightbox">
+     <img  id="close-lightbox" src="images/icon-close.svg">
+     <section>
+     <div class="images-lightbox">
+      <img class="image-lightbox" src="images/image-product-1.jpg">
+     </div>
+     <div class="images-lightbox">
+      <img class="image-lightbox" src="images/image-product-2.jpg">
+     </div>
+     <div class="images-lightbox">
+      <img class="image-lightbox" src="images/image-product-3.jpg">
+     </div>
+     <div class="images-lightbox">
+      <img class="image-lightbox" src="images/image-product-4.jpg">
+     </div>
+      <div id="previous-lightbox"><img  src="images/icon-previous.svg"></div>
+      <div id="next-lightbox"><img  src="images/icon-next.svg"></div>
+    </section>
+</div>
+<div class="open-menu" data-open-menu>
+     <img  data-open-menu src="images/icon-menu.svg">
+</div> 
+<div id="menu" data-menu>
+  <div id="close-menu">
+      <img src="images/icon-close.svg">
+  </div>
+  <a>Collections</a>
+  <a>Men</a>
+  <a>Women</a>
+  <a>About</a>
+  <a>Contact</a>
+</div>
+<div id="main-body">
+  <header>
+      <img  src="images/logo.svg">
+      <img class="cart-icon" src="images/icon-cart.svg">
+      <div id="notice">0</div>
+      <div class="cart">
+          <div id="cart-content">
+            <h1>Cart</h1>
+            <div id="empty-cart">
+                Your cart is empty.
+            </div>
+            <div id="cart-items">
+                <div  class="item-1">
+                    <img src="images/image-product-1-thumbnail.jpg">
+                </div>
+                <div class="item-2">Autumn Limited Edition...</div>
+                <div class="item-3">$125.00  x</div>
+                <div class="item-4" id="quantity">0</div>
+                <div class="item-5" id="total">$375.00</div>
+                <div class="item-6" id="delete">
+                    <img src="images/icon-delete.svg">
+                </div>
+                <a class="item-7">Checkout</a>   
+          </div>
+        </div>
+      </div>
+      <img src="images/image-avatar.png">
+  </header>
+  <article>
+  <!-- image carousel -->
+    <section>
+     <div class="images">
+      <img class="image" src="images/image-product-1.jpg">
+     </div>
+     <div class="images">
+      <img class="image" src="images/image-product-2.jpg">
+     </div>
+     <div class="images">
+      <img class="image" src="images/image-product-3.jpg">
+     </div>
+     <div class="images">
+      <img class="image" src="images/image-product-4.jpg">
+     </div>
+      <div id="previous"><img  src="images/icon-previous.svg"></div>
+      <div id="next"><img  src="images/icon-next.svg"></div>
+    </section>
+    <section>
+      <p>Sneaker Company</p>
+      <h1>Fall Limited Edition Sneakers</h1>
+      <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
+  durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+    </section>
+    <section>
+      <div class="price">
+          <div>$125.00</div>
+          <div>50%</div>
+          <div>$250.00</div>
+      </div>
+      <div class="quantity">
+          <div id="minus"><img  src="images/icon-minus.svg"></div>
+          <div id="quantity-value">0</div>
+          <div id="plus"><img src="images/icon-plus.svg"></div>
+      </div>
+      <div id="add">
+          <div><img src="images/icon-cart.svg"></div>
+          Add to cart
+      </div>
+    </section>
+  </article>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Suleiman Abduljalil Muhammed</a>.
+  </div>
+</div>
+</body>
+</html>
