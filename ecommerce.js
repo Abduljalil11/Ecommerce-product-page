@@ -18,6 +18,9 @@ window.onload = function(){
     })
     //click outside menu to close menu
     document.addEventListener("click",(e)=>{
+        if(window.matchMedia("(min-width:1024px)").matches){
+            return
+        }
         let menuOpen = e.target.matches("[data-open-menu]");
         if(!menuOpen && e.target.closest("[data-menu]") == null){
         menu.style.width = "0%"  ;
@@ -27,8 +30,8 @@ window.onload = function(){
         }        
     })  
     //image carousel section 
-    let images = document.getElementsByClassName("images")  ;
-    let next =  document.getElementById("next");
+    let images = document.getElementsByClassName("images") ;
+    let next =  document.getElementById("next") ;
     let previous = document.getElementById("previous") ;
     let imageIndex = 1;
     showImages(imageIndex);

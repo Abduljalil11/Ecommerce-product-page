@@ -48,30 +48,34 @@
 <div id="main-body">
   <header>
       <img  src="images/logo.svg">
-      <img class="cart-icon" src="images/icon-cart.svg">
-      <div id="notice">0</div>
-      <div class="cart">
-          <div id="cart-content">
-            <h1>Cart</h1>
-            <div id="empty-cart">
-                Your cart is empty.
-            </div>
-            <div id="cart-items">
-                <div  class="item-1">
-                    <img src="images/image-product-1-thumbnail.jpg">
-                </div>
-                <div class="item-2">Autumn Limited Edition...</div>
-                <div class="item-3">$125.00  x</div>
-                <div class="item-4" id="quantity">0</div>
-                <div class="item-5" id="total">$375.00</div>
-                <div class="item-6" id="delete">
-                    <img src="images/icon-delete.svg">
-                </div>
-                <a class="item-7">Checkout</a>   
-          </div>
+      <div>
+        <div id="cart">
+          <img class="cart-icon" src="images/icon-cart.svg">
+          <div id="notice">0</div>
         </div>
+        <div class="cart">
+            <div id="cart-content">
+              <h1>Cart</h1>
+              <div id="empty-cart">
+                  Your cart is empty.
+              </div>
+              <div id="cart-items">
+                  <div  class="item-1">
+                      <img src="images/image-product-1-thumbnail.jpg">
+                  </div>
+                  <div class="item-2">Autumn Limited Edition...</div>
+                  <div class="item-3">$125.00  x</div>
+                  <div class="item-4" id="quantity">0</div>
+                  <div class="item-5" id="total">$375.00</div>
+                  <div class="item-6" id="delete">
+                      <img src="images/icon-delete.svg">
+                  </div>
+                  <a class="item-7">Checkout</a>   
+              </div>
+           </div>
+        </div>
+        <img class="profile-pic" src="images/image-avatar.png">
       </div>
-      <img src="images/image-avatar.png">
   </header>
   <article>
   <!-- image carousel -->
@@ -92,25 +96,31 @@
       <div id="next"><img  src="images/icon-next.svg"></div>
     </section>
     <section>
-      <p>Sneaker Company</p>
-      <h1>Fall Limited Edition Sneakers</h1>
-      <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
-    </section>
-    <section>
-      <div class="price">
-          <div>$125.00</div>
-          <div>50%</div>
-          <div>$250.00</div>
+      <div>
+        <p class="sneaker-com">Sneaker Company</p>
+        <h1 class="fles">Fall Limited Edition Sneakers</h1>
+        <p class="desc">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+    durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
       </div>
-      <div class="quantity">
-          <div id="minus"><img  src="images/icon-minus.svg"></div>
-          <div id="quantity-value">0</div>
-          <div id="plus"><img src="images/icon-plus.svg"></div>
-      </div>
-      <div id="add">
-          <div><img src="images/icon-cart.svg"></div>
-          Add to cart
+      <div>
+        <div class="price">
+            <div>
+              <div class="selling-price">$125.00</div>
+              <div class="discount">50%</div>
+            </div>
+            <div class="main-price">$250.00</div>
+        </div>
+        <div class="qtt-add">
+          <div class="quantity">
+              <div id="minus"><img  src="images/icon-minus.svg"></div>
+              <div id="quantity-value">0</div>
+              <div id="plus"><img src="images/icon-plus.svg"></div>
+          </div>
+          <div id="add">
+              <div><img src="images/icon-cart.svg"></div>
+              Add to cart
+          </div>
+        </div>
       </div>
     </section>
   </article>
