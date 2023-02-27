@@ -18,17 +18,17 @@ window.onload = function(){
     })
     //click outside menu to close menu
     document.addEventListener("click",(e)=>{
-        if(window.matchMedia("(min-width:1024px)").matches){
-            return
-        }
-        let menuOpen = e.target.matches("[data-open-menu]");
-        if(!menuOpen && e.target.closest("[data-menu]") == null){
-        menu.style.width = "0%"  ;
-        mainBody.style.filter = "brightness(1)";
-        mainBody.style.backgroundColor = "white";
-        mainBody.style.pointerEvents = "auto" ;
+        if(window.matchMedia("(max-width:767px)").matches){
+            let menuOpen = e.target.matches("[data-open-menu]");
+            if(!menuOpen && e.target.closest("[data-menu]") == null){
+            menu.style.width = "0%"  ;
+            mainBody.style.filter = "brightness(1)";
+            mainBody.style.backgroundColor = "white";
+            mainBody.style.pointerEvents = "auto" ;
+            }
         }        
     })  
+
     //image carousel section 
     let images = document.getElementsByClassName("images") ;
     let next =  document.getElementById("next") ;
@@ -50,6 +50,7 @@ window.onload = function(){
       }
       images[imageIndex-1].style.display = "block";
     }
+
     //quantity section
     let plus = document.getElementById("plus");
     let minus = document.getElementById("minus");
@@ -68,6 +69,7 @@ window.onload = function(){
         quantityValue.innerText = value
        }
     })
+
     //cart section
     let cartIcon = document.querySelector(".cart-icon");
     let cart = document.querySelector(".cart");
@@ -131,7 +133,24 @@ window.onload = function(){
       for (i = 0; i < imagesLightbox.length; i++) {
         imagesLightbox[i].style.display = "none";
       }
-      imagesLightbox[imageIndex-1].style.display = "block";
-    }       
-    }  
+      imagesLightbox[imageIndex-1].style.display = "flex";
+    } 
+    
+    //thumbnail section
+    let thumbnails = Array.from(document.getElementsByClassName("thumbnail"));
+    let image = document.querySelector(".image");
+    let index = 0
+    thumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener("click", ()=>{
+            image.setAttribute("src", `images/image-product-${thumbnails.indexOf(thumbnail)+1}.jpg`)
+            thumbnails.forEach(e => {
+                e.style.border = "none"
+                e.children[0].style.opacity = "1"
+            })
+            thumbnail.style.border = "0.15rem solid #FF7D1B"
+            thumbnail.children[0].style.opacity = "0.5"
+        })
+    })
+
+    } 
     

@@ -38,10 +38,12 @@ header > img:first-child{
     height:1.3rem;
     transition:0.25s ease-in-out;
     margin-right: 1rem;
+    cursor: pointer;
 }
 .profile-pic{
     width:1.3rem;
     height:1.3rem;
+    cursor: pointer;
 }
 
 section:first-child{
@@ -123,6 +125,9 @@ section:last-child > div:last-child{
     margin-top:1rem;
     border-radius:0.5rem;
 }
+.quantity img {
+    cursor: pointer;
+}
 .quantity > div{
     width:10%;
     display: contents;
@@ -176,9 +181,11 @@ section:last-child > div:last-child{
     width:100%;
     margin-top:1.5rem;
     margin-left:1.5rem;
+    cursor: pointer;
 }
 #menu > a:nth-child(2){
     margin-top:5.5rem;
+    cursor: pointer;
 }
 
 
@@ -186,6 +193,7 @@ section:last-child > div:last-child{
 .image{
     width:100%;
     height:auto;
+    cursor: pointer;
 }
 .images{
     display:none;
@@ -302,6 +310,7 @@ section:last-child > div:last-child{
     margin-left:0.7rem;
     display:flex;
     align-items:center;
+    cursor: pointer;
 }
 .item-7{
     display:flex;
@@ -314,6 +323,7 @@ section:last-child > div:last-child{
     background-color:#FF7D1B;
     color:white;
     transition:0.25s ease-in-out;
+    cursor: pointer;
 }
 .item-1 > img{
     min-width: 3rem;
@@ -348,6 +358,7 @@ section:last-child > div:last-child{
     top:-0.3rem;
     color:white;
     font-size:0.7rem;
+    cursor: pointer;
 }
 
 /*hover state*/
@@ -384,6 +395,7 @@ section:last-child > div:last-child{
     right:1rem;
     top:1rem;
     z-index:500;
+    cursor: pointer;
 }
 #lightbox section{
     height:100%;
@@ -411,6 +423,7 @@ section:last-child > div:last-child{
     justify-content:center;
     align-items:center;
     transition:0.25s ease-in-out;
+    cursor: pointer;
 }
 #previous-lightbox img{
     width:50%;
@@ -427,6 +440,7 @@ section:last-child > div:last-child{
     justify-content:center;
     align-items:center;
     transition:0.25s ease-in-out;
+    cursor: pointer;
 }
 #next-lightbox img{
     width:50%;
@@ -434,6 +448,10 @@ section:last-child > div:last-child{
 }
 #next-lightbox:hover , #previous-lightbox:hover{
     background-color:rgba(225,225,225,0.5);
+}
+
+.thumbnails{
+    display: none;
 }
 
 
@@ -452,10 +470,20 @@ section:last-child > div:last-child{
         flex-direction: row;
         margin-left: 25%;
         margin-top: 0.5rem;
+        position: absolute;
     }
 
     #menu a{
         color: hsl(219, 9%, 45%);
+        height: 3.8rem;
+        text-align: center;
+        min-width: 5.2rem;
+        
+    }
+
+    #menu a:hover, #menu > a:nth-child(2):hover {
+        border-bottom: 0.3rem solid #FF7D1B;
+        color: black;
     }
 
     #close-menu{
@@ -468,6 +496,7 @@ section:last-child > div:last-child{
 
     #menu > a:nth-child(2) {
         text-decoration: none;
+        text-align: center;
         color: hsl(219, 9%, 45%);;
         width: 100%;
         margin-top: 1.5rem;
@@ -478,7 +507,7 @@ section:last-child > div:last-child{
         justify-content: space-between;
         border-bottom: 0.15rem solid hsl(220, 17%, 90%);
         padding-bottom: 2rem;
-        margin-bottom: 5rem;
+        margin-bottom: 4rem;
         width: 80%;
     }
 
@@ -495,6 +524,12 @@ section:last-child > div:last-child{
     .profile-pic{
         width: 2.3rem;
         height: 2.3rem;
+        
+        border-radius: 50%;
+    }
+
+    .profile-pic:hover{
+        border: 0.2rem solid #FF7D1B;
     }
 
     #next{
@@ -525,6 +560,7 @@ section:last-child > div:last-child{
     }
     #add{
         width: 60%;
+        cursor: pointer;
     }
 
     .price{
@@ -539,11 +575,12 @@ section:last-child > div:last-child{
     section:first-child{
         height: auto;
         margin-left: 1rem;
-        overflow: auto;
+        overflow: hidden;
     }
 
     .cart-icon{
         margin-right: 2rem;
+        
     }
 
     .open-cart{
@@ -556,5 +593,214 @@ section:last-child > div:last-child{
 
     #notice{
         right: 1rem;
+    }
+
+    .thumbnails{
+        display: flex;
+        width: 80%;
+        justify-content: space-between;
+        margin-top: 1rem;
+    }
+
+    .thumbnails > div {
+        width: 20%;
+        cursor: pointer;
+        border-radius: 0.7rem;
+    }
+
+    .thumbnails > div:hover{
+        opacity: 0.5;
+    }
+
+    .thumbnails > div > img{
+        width: 100%;
+        height: 100%;
+        border-radius: 0.5rem;
+    }
+
+    .images-lightbox{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image-lightbox{
+        width: 50%;
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width:1023px){
+    #main-body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #menu{
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        flex-direction: row;
+        margin-left: 19%;
+        margin-top: 0.5rem;
+        position: absolute;
+    }
+
+    #menu a{
+        color: hsl(219, 9%, 45%);
+        height: 3.8rem;
+        text-align: center;
+        min-width: 5rem;
+        
+    }
+
+    #menu a:hover, #menu > a:nth-child(2):hover {
+        border-bottom: 0.3rem solid #FF7D1B;
+        color: black;
+    }
+
+    #close-menu{
+        display: none;
+    }
+
+    .open-menu{
+        display: none;
+    }
+
+    #menu > a:nth-child(2) {
+        text-decoration: none;
+        text-align: center;
+        color: hsl(219, 9%, 45%);;
+        width: 100%;
+        margin-top: 1.5rem;
+        margin-left: 1.5rem;
+    }
+
+    header{
+        justify-content: space-between;
+        border-bottom: 0.15rem solid hsl(220, 17%, 90%);
+        padding-bottom: 2rem;
+        margin-bottom: 4rem;
+        width: 100%;
+    }
+
+    header > img:first-child{
+        width: auto;
+        height: auto;
+        margin-left: 1rem;
+    }
+
+    header > div:last-child{
+        align-items: center;
+    }
+
+    .profile-pic{
+        width: 2.3rem;
+        height: 2.3rem;
+        margin-right: 1rem;
+        border-radius: 50%;
+    }
+
+    .profile-pic:hover{
+        border: 0.2rem solid #FF7D1B;
+    }
+
+    #next{
+        display: none;
+    }
+    #previous{
+        display:none;
+    }
+
+    .image{
+        width: 80%;
+        border-radius: 1rem;
+    }
+
+    article{
+       display: flex; 
+       flex-direction: row;
+       width: 100%;
+    }
+
+    .qtt-add{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .quantity{
+        width: 35%;
+    }
+    #add{
+        width: 60%;
+        cursor: pointer;
+    }
+
+    .price{
+        flex-direction: column;
+        align-items: self-start;
+    }
+
+    .fles{
+        font-size: 3rem;
+    }
+
+    section:first-child{
+        height: auto;
+        margin-left: 1rem;
+        overflow: hidden;
+    }
+
+    .cart-icon{
+        margin-right: 1rem;
+    }
+
+    .open-cart{
+        width: 50%;
+    }
+
+    #cart-content{
+        box-shadow: 1px 7px 25px 0px hsl(219, 9%, 45%);
+    }
+
+    #notice{
+        right: 0rem;
+    }
+
+    .thumbnails{
+        display: flex;
+        width: 80%;
+        justify-content: space-between;
+        margin-top: 1rem;
+    }
+
+    .thumbnails > div {
+        width: 20%;
+        cursor: pointer;
+        border-radius: 0.7rem;
+    }
+
+    .thumbnails > div:hover{
+        opacity: 0.5;
+    }
+
+    .thumbnails > div > img{
+        width: 100%;
+        height: 100%;
+        border-radius: 0.5rem;
+        padding: 0rem;
+    }
+
+    .images-lightbox{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image-lightbox{
+        width: 50%;
     }
 }
